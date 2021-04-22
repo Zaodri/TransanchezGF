@@ -1,0 +1,180 @@
+body{
+    width: auto;
+    height: auto;
+    margin: 5px;
+ /*border: solid;*/
+}
+
+header {
+        /*display: block;*/
+        width: 100%;
+        /*height: 150px;*/
+        border: solid;
+  /*float: left;
+  width: 1000%;*/
+}
+
+nav {
+    display: block;
+    width: 100%;
+    height: 60px;
+    border: solid;
+  /*float: left;
+  background-color: #000; 
+  color: #fff;
+  width: 1000%;*/
+}
+
+
+section {
+        display: inline-block;;
+        width: 100%;
+        height: 100px;
+        border: solid;
+  /*float: left;
+  background-color: #000; 
+  color: #fff;
+  width: 1000%;*/
+  
+           
+               
+
+}
+
+aside {
+      display: block;
+      
+      width: 100%;
+      height: 553px;
+      border: solid;
+  /*float: left;
+  background-color: #000; 
+  color: #fff;
+  width: 1000%;*/
+}
+
+.imagenFondo
+{
+  background-color: #17214B /*#21306c*/;
+  background-image: url("../images/login_2.png");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.enbloque
+{
+  display: block;
+}
+
+.llenaBody{
+    width: max-width;
+    height: max-height;
+}
+
+.enfilar
+{
+  display: inline;
+}
+
+.derecha
+{
+  float: right;
+}
+
+.boton
+{
+  background-color: #9fc645/*#841d1d*/;
+  width: 10%;
+  height: 120%;
+}
+
+
+#imgLogo
+{
+  width  : 100%;
+  height : 100%;
+}
+
+#cajaIzquierdaMain{
+                  float: left;
+                  width: 25%;
+}
+
+#cajaCentrosection{
+                float: left;
+                width: 50%;
+}
+
+#cajaDerechaMain{
+                float: right;
+                width: 25%;
+}
+
+#cajaIzquierda{
+              float: left;
+              width: 38%;
+}
+
+#cajaNoIzquierdaNoDerecha{
+                          float: left;
+                          width: 43%;
+}
+
+#cajaDerecha{
+            float: right;
+            width: 19%;
+}
+
+#redondo{
+        margin-top: 30px;
+        border: solid white;
+        border-radius: 200px;
+        width: 200px;
+        height: 200px;
+        background-color:#000000;
+}
+
+#divconPadding{
+              padding-top: 35px;
+              padding-left: 90px;
+              font-size: 250%;
+              color: white;
+}
+
+#sticker1{
+          /*display: block;*/
+          /*float: center;*/
+          background-color: #FFFFFF;
+          border: solid #E72C3C;
+          border-radius: 5px;
+          width: 45%;
+          height: 100%;
+}
+
+#sticker1HermanoIzq{
+                    float: left;
+                    width: 45%;
+}
+
+#sticker1HermanoDer{
+                    float: right;
+                    width: 45%;
+}
+
+.seccionIzquierda{
+                  float: left;
+                  width: 33%;
+}
+
+.seccionDerecha{
+                  float: left;
+                  width: 33%;
+}
+
+.seccionCentro{
+                  float: left;
+                  width: 100%;
+                  text-align: center;
+}
+
+
