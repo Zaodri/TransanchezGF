@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:html5="http://java.sun.com/jsf/passthrough"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>#{lang.pageTitle}</title>
+        <link rel="stylesheet" href="../../css/login1.css"/> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"></link>
+    </h:head>
+    <h:body>   
+        <body>
+            <header>
+                <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+                    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" style="color: red" href="#">Transanchez SAS</a>
+                    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <input class="form-control form-control-dark w-100" type="text" placeholder="Buscar" aria-label="Search" style="color: olivedrab"/>
+                    <ul class="navbar-nav px-3">
+                        <li class="nav-item text-nowrap">
+                            <a class="nav-link" href="../../TrSanIndex.xhtml" style="color: olivedrab">Salir</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <c:if test="#{ususarioSession.mesError.equalsIgnoreCase('mOk')}">
+                        <div class="alert alert-success" role="alert">
+                            Encontrado !!!
+                        </div>
+                    </c:if>
+                    
+                     <c:if test="#{ususarioSession.mesError.equalsIgnoreCase('mBad')}">
+                        <div class="alert alert-warning" role="alert">
+                            Por favor verifique sus datos !!!
+                        </div>
+                    </c:if>
+                    
+                     <c:if test="#{ususarioSession.mesError.equalsIgnoreCase('mError')}">
+                        <div class="alert alert-danger" role="alert">
+                            intente mas tarde !!!
+                        </div>
+                    </c:if>
+                    
+                     <c:if test="#{ususarioSession.mesError.equalsIgnoreCase('mAdmin')}">
+                        <div class="alert alert-info" role="alert">
+                           Contacte al administrador del sitio !!!
+                        </div>
+                    </c:if>  
+                <div class="Login-bop">
+                    <img class="avatar" src="../../images/wl-logo.png" alt=""/>
+                    <h1>Recuperar contraseña</h1>
+                    <h:form>
+                        <label for="NombreUser">Usuario</label>
+                   <!--     <input type="text" name="user" placeholder="usuario" required=""/>-->
+                        <h:inputText value="#{recupCont.recContra}" requiredMessage="Por favor Ingrese su usuario" required="true" class="form-control" id="exampleInputUser" html5:aria-describedby="UserHelp"/>
+                        <small id="UserHelp" class="form-text text-muted">ingrese su usuario.</small>
+                        <label for="exampleInputUser">Correo</label>
+                            <h:inputText 
+                                value="#{recupCont.email}" 
+                                required="true"
+                                requiredMessage="Por favor ingrese un correo electronico"
+                                class="form-control" id="exampleInputEmail1" 
+                                html5:aria-describedby="emailHelp"/>
+                            <small id="emailHelp" class="form-text text-muted">ingrese un correo electronico.</small>
+                            <h:message for="exampleInputEmail1" style="color: red"></h:message>
+                        <div class="form-group form-check">
+                            <h:commandButton  class="btn btn-success btn-lg btn-block" value="Enviar" action="#{recupCont.actuContras()}"> 
+<!--                        <a href="../administrador/indexAdmin.xhtml" class="Aceptar"></a>-->
+                             </h:commandButton>              
+                        </div>
+                    <!--    <h:inputText requiredMessage="Por favor Ingrese un documento"></h:inputText>
+                        <h:message for="fmrDocumento" style="color: olivedrab"></h:message> -->
+                      
+                        
+                    </h:form>
+                </div>
+        </body>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    </h:body>
+</html>
+

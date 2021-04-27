@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:html5="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<!--      xmlns:a4j="http://richfaces.org/a4j"-->
+    <h:head>
+        <title>#{lang.pageTitle}</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no"/>
+        <meta http-equiv="Content-type"  content="text/html; charset=UTF-8"/>
+        <!-- Theme color -->
+        <link href="../css/less/colors/darkRed.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="../administrador.css"/>        
+        <link rel="stylesheet" href="../css/registroCSS.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:400italic,700italic&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'/>
+        <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'/>
+        <link href="../css/mobilemenu.css" rel="stylesheet"/>
+        <link href="../css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="../css/simple-line-icons.css" rel="stylesheet"/>
+        <link href="../css/foundation.min.css" rel="stylesheet"/>
+        <link href="../css/jquery.fancybox.css" rel="stylesheet"/>
+        <link href="../css/style.min.css" rel="stylesheet"/>
+        <link href="../css/less/transanchez.css" rel="stylesheet"/>
+
+        <link rel=" icon" type="image/png" href="favicon.png" sizes="32x32"/> 
+    </h:head>
+    <h:body>		
+        <body>
+            <figure> <!--configurar imagen-->
+                <img src="images/Isologo.png"/>
+            </figure>
+            <div  class="imagenFondo">
+                <nav>
+                    <img src="images/verde_fondo_.png"/> 
+                </nav>
+            </div>
+            
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="admin-bop">
+                            <h2> Welcome...</h2>
+                            <br></br>
+                            <h1>Administrator</h1>
+                            <nav class="js-navs-list">
+                                <button type="button" onclick="#{user.edit('85000001')}">
+                                    <a href="Empleado.html" class="Aceptar">Employees</a>
+                                </button>
+                                <button type="button">
+                                    <a href="Clientes.html" class="Aceptar">Customers</a>
+                                </button>
+                                <button type="button">
+                                    <a href="Entrega_mercancia.html" class="Aceptar">Merchandise deliveries</a>
+                                </button>
+                                <button type="button">
+                                    <a href="Rutas_de_vehiculos.html" class="Aceptar">Vehicle routes</a>
+                                </button>
+                                <button type="button">
+                                    <a href="Mecanico.html" class="Aceptar">Control and maintenance of vehicles</a>
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h:form>
+                            <label>User</label>
+                            <input class="input" type="text" value="#{editUser.name}" placeholder="&#128101; Names" required = 'autofocus'/>
+                            <input class="input" type="text" placeholder="&#128101; Surname" required=""/>
+                            <input class="input" type="text" placeholder="&#128101; Second surname" required=""/>
+                            <input class="input" type="email" placeholder="&#9993; E-mail" required=""/>
+                            <input class="input" type="tel" placeholder="&#128222; Phone" required=""/>
+                            <input class="input" type="text" placeholder="&#127969; Address" required=""/>
+                            <div class="btn__form">
+                                <input class="btn__submit" type="submit" value="register"/>
+                                <input class="btn__reset" type="reset" value="Clear"/>
+                            </div>
+                        </h:form><!--<h:inputText id="name-id" value="{editUser.name}" class="form-control"/>-->
+                    </div>
+                </div>
+            </div> 
+        </body>
+        <script data-main="js/script.js" src="js/lib/require.js"></script>
+        <script data-main="js/script.js" src="js/lib/require.js"></script>
+        <script src="js/lib/modernizr.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+    </h:body>	
+</html>																	

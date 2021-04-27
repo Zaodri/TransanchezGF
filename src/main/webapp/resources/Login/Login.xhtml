@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:html5="http://java.sun.com/jsf/passthrough"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>#{lang.pageTitle}</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no"/>
+        <meta http-equiv="Content-type"  content="text/html; charset=UTF-8"/>
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/dashboard/"></link>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"></link>        
+        <link rel="shortcut icon" href="image/logo.png" type="imagen/x-icon"/> <!--ETIQUETA PARA EL LOGO-->
+        <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:400italic,700italic&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'/>
+        <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href="../../css/login1.css"/>        
+        <link href="../../css/style.min.css" rel="stylesheet"/>
+        <link href="../../css/transanchez.css" rel="stylesheet"/>
+    </h:head>
+    <h:body>
+       <body>
+           <header>
+                <nav class="navbar sticky-top bg-dark-red flex-md-nowrap p-0 shadow" style="color: olivedrab">                
+                    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" style="color: #841d1d" href="#">Transanchez SAS</a>
+                    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"/>
+                    <ul class="navbar-nav px-3">
+                        <li class="nav-item text-nowrap">
+                             <a class="nav-link" href="https://www.google.com" style="color: olivedrab">Salir</a>
+                        </li>
+                    </ul>
+                </nav>
+           </header>
+           
+           <c:if test="#{ususarioSession.mesError.equalsIgnoreCase('mOk')}">
+               <div class="alert alert-success" role="alert">
+                   Encontrado !!!
+               </div>
+           </c:if>
+
+           <c:if test="#{ususarioSession.mesError.equalsIgnoreCase('mBad')}">
+               <div class="alert alert-warning" role="alert">
+                   Por favor verifique sus datos !!!
+               </div>
+           </c:if>
+
+           <c:if test="#{ususarioSession.mesError.equalsIgnoreCase('mError')}">
+               <div class="alert alert-danger" role="alert">
+                   intente mas tarde !!!
+               </div>
+           </c:if>
+
+           <c:if test="#{ususarioSession.mesError.equalsIgnoreCase('mAdmin')}">
+               <div class="alert alert-info" role="alert">
+                   Contacte al administrador del sitio !!!
+               </div>
+           </c:if>  
+           
+            <div class="Login-bop">
+                <img class="avatar" src="../../images/wl-logo.png" alt=""/>
+                <h1>Ingrese al sistema</h1>
+                <h:form>
+                    <label for="NombreUsuario">Usuario</label>
+                    <h:inputText value="#{usuSess.usuarioIn}" requiredMessage="Por favor Ingrese su correo" required="true" class="form-control" id="exampleInputEmail1" html5:aria-describedby="emailHelp"/>
+<!--                    <input type="text" name="user" placeholder="Enter User" required=""/>-->
+                    <label for="ContraseñaUsuario">contraseña</label>
+                    <h:inputSecret value="#{usuSess.claveIn}" requiredMessage="Por favor Ingrese una clave" required="true" class="form-control" id="exampleInputPassword1"/>
+<!--                    <input type="password" name = 'key' placeholder="Enter password" required=""/>-->
+
+                    <h:commandButton  class="btn btn-success btn-lg btn-block" value="Ingresar" action="#{usuSess.validarUsuario()}"> 
+<!--                        <a href="../administrador/indexAdmin.xhtml" class="Aceptar"></a>-->
+                    </h:commandButton>
+<!--                    <button id="logueo" type="button" onclick="{usuSess.validarUsuario()}">     onclick="window.location = '../administrador/indexAdmin.xhtml';"
+                        <a href="../administrador/indexAdmin.xhtml" class="Aceptar">
+                         Log in
+                        </a>
+                    </button>                -->
+
+<a href="RecuperarContra.xhtml" style="color: red">Recuperar contraseña</a>
+                    <!--<a href="Registro.html">REGISTRAR</a> -->
+                </h:form>
+            </div>
+        </body>
+    </h:body>
+</html>
+

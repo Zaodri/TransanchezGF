@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, user-scalable=no"/>
+
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+        <title>Login</title>
+        <link href="../../css/mobilemenu.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/simple-line-icons.css" rel="stylesheet">
+        <link href="../../css/foundation.min.css" rel="stylesheet">
+        <link href="../../css/jquery.fancybox.css" rel="stylesheet">
+        <link href="../../css/style.min.css" rel="stylesheet">
+        <link href="../../css/transanchez.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="../../css/login1.css"/>
+	<script src="../../js/conect_db_transanchez.js"></script>        
+    </head>
+    <!--<h:body >-->
+    <body>
+        <div class="Login-bop">
+            <img class="avatar" src="../../images/wl-logo.png" alt=""><!--</img>-->
+            <h1>Login User</h1>
+            <form action="../../html/registro.html" method="GET">
+                <label for="NombreUsuario">User</label>
+                <input type="text" name="user" placeholder="Enter User" required="">
+                <label for="ContraseñaUsuario">Password</label>
+                <input type="password" name = 'key' placeholder="Enter password" required="">
+
+
+                <button id="logueo" onclick="#{usuSess.validarUsuario()}" type="button">
+<!--                    <a href="../Admin.xhtml" class="Aceptar">-->
+                         Log in
+<!--                    </a>-->
+                </button> <br> <br> 
+               <!-- <a  href="../Mecanico/Mecanico.html" ><!--class="btn__submit" type="submit" value="Iniciar sesion"-->
+               <!-- </a>-->
+
+                <a href="olvidoContrasena.html">Forgot password</a><br>
+                <!--<a href="Registro.html">REGISTRAR</a> -->
+
+            </form>
+        </div>
+
+    </body>
+</html>
+
+

@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:a4j="http://richfaces.org/a4j">
+    >
+<!--      xmlns:a4j="http://richfaces.org/a4j"-->
     <h:head>
         <title>#{lang.pageTitle}</title>
         <meta name="viewport" content="width=device-width, user-scalable=no"/>
@@ -17,7 +18,7 @@
         <link href="css/foundation.min.css" rel="stylesheet"/>
         <link href="css/jquery.fancybox.css" rel="stylesheet"/>
         <link href="css/style.min.css" rel="stylesheet"/>
-        <link href="css/transanchez.css" rel="stylesheet"/>
+        <link href="css/less/transanchez.css" rel="stylesheet"/>
         <!--<link href="css/login1_1.css" rel="stylesheet"/> --> 
 
         <!-- Theme color -->
@@ -45,7 +46,7 @@
                         <div class="row">
                             <div class="column large-2">
                                 <div class="logo-wrapper">
-                                    <!--<img src="images/TrSanchez/logo2.png" alt="" class="logo-image"/>-->
+                                    <img src="images/TrSanchez/logo2.png" alt="" class="logo-image"/>
                                 </div>
                             </div>
                             <div class="column large-10">
@@ -431,9 +432,11 @@
                             <div class="column large-3 medium-3">
                                 <div class="checkit-btn-block">
                                     <span class="checkit-btn l-dis-ib button">
-                                        <button class="checkit-btn l-dis-ib button" type="button" onclick="window.location = 'faces/Login.xhtml';">					
+                                        <button class="checkit-btn l-dis-ib button" type="button" onclick="window.location = 'faces/resources/Login/Login.xhtml';">
                                             log in					
                                         </button>
+                                        <a href="resources/Login/Login.xhtml" type="button" class="btn btn-primary btn-lg btn-block"></a>
+                                            
                                     </span>
                                 </div>
 
